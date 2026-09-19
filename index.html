@@ -20,7 +20,7 @@
 	</div>
 
 	<script type="module">
-	 import { HandLandmarker, FilesetResolver } from "https://unpkg.com";
+	 import { HandLandmarker, FilesetResolver } from "https://jsdelivr.net";
 	 
 
 	 const video = document.getElementById("camera");
@@ -35,7 +35,7 @@
 	 {
 	  try 
 	  { 
-	   const visionFiles = await FilesetResolver.forVisionTasks("https://unpkg.com/wasm");
+	   const visionFiles = await FilesetResolver.forVisionTasks("https://jsdelivr.net");
 	   handLandmarker = await HandLandmarker.createFromOptions(visionFiles, { baseOptions: { modelAssetPath: "https://googleapis.com", delegate: "GPU" }, runningMode: "VIDEO", numHands: 2 });
 	   startCamera();
 	  } catch (error) { alert("MediaPipe setup failed."); }
