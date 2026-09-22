@@ -36,7 +36,7 @@
 	  try 
 	  { 
 	   const visionFiles = await FilesetResolver.forVisionTasks("https://jsdelivr.net");
-	   handLandmarker = await HandLandmarker.createFromOptions(visionFiles, { baseOptions: { modelAssetPath: "https://googleapis.com", delegate: "GPU" }, runningMode: "VIDEO", numHands: 2 });
+	   handLandmarker = await HandLandmarker.createFromOptions(visionFiles, { baseOptions: { modelAssetPath: "https://storage.googleapis.com/mediapipe-models/hand_landmarker/hand_landmarker/float16/1/hand_landmarker.task", delegate: "GPU" }, runningMode: "VIDEO", numHands: 2 });
 	   startCamera();
 	  } catch (error) { alert("MediaPipe setup failed."); }
 	 }
